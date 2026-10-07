@@ -1,8 +1,18 @@
 from groq import Groq
 import streamlit as st
+from dotenv import load_dotenv
+import os
 
-st.title("AGENTE ESCALADOR FLAVINHO ... ")
-client = Groq(api_key = )
+
+
+load_dotenv()
+
+
+st.title("Pessoa especialista 🎲")
+
+
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 pergunta = st.text_input('Digite sua pergunta...')  
